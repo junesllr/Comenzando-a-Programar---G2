@@ -55,7 +55,7 @@ public class Carrerapopular1 {
 				System.out.println("Tiempo realizado en la carrera, en segundos:");
 				segundos=teclado.nextDouble();
 			}
-			segundos=segundos/60;
+			minutos=minutos*60;
 			tiempo=minutos+segundos;
 			
 				if(tiempo<60) {
@@ -89,9 +89,9 @@ public class Carrerapopular1 {
 		System.out.println("Numero de participantes: "+ participantes);
 		System.out.println("Participantes con más de 3 carreras : "+ totalcarreras);
 		System.out.println("Participantes con tiempos menores a 60 minutos: "+menos60);
-		System.out.printf("Tiempo medio : %.2f minutos.",tiempomedio );
+		System.out.printf("Tiempo medio : %.2f minutos.",(tiempomedio/60) );
 		System.out.println("");
-		System.out.printf("Mejor tiempo : %.2f minutos.",mejortiempo);
+		System.out.printf("Mejor tiempo : %.2f minutos.",(mejortiempo/60);
 		
 		teclado.close();
 	}
