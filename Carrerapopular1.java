@@ -6,8 +6,7 @@ public class Carrerapopular1 {
 		// TODO Auto-generated method stub
 		
 		String dni;
-		int carrerasanterior,minutos,participantes=0,respuesta=1,totalcarreras=0,menos60=0,dninumero=0,tipodecarrera;
-		double tiempo,segundos,tiempototal=0,tiempomedio=0,mejortiempo=0;
+		int carrerasanterior,minutos,participantes=0,respuesta=1,totalcarreras=0,menos60=0,dninumero=0,tipodecarrera,tiempominutos=0,tiempomedio=0,tiempototal=0,tiempo,segundos,mejortiempominutos=0,mejortiemposegundos=0,mejortiempo=0,tiemposegundos=0;
 		
 		Scanner teclado = new Scanner(System.in);
 		
@@ -48,17 +47,19 @@ public class Carrerapopular1 {
 				System.out.println("Tiempo realizado en la carrera, en minutos:");
 				minutos=teclado.nextInt();
 			}
+			
 			System.out.println("Tiempo realizado en la carrera, en segundos:");
-			segundos=teclado.nextDouble();
+			segundos=teclado.nextInt();
 			while ( segundos< 0 || segundos>60) {
 				System.out.println("Error.Número incorrecto.");
 				System.out.println("Tiempo realizado en la carrera, en segundos:");
-				segundos=teclado.nextDouble();
+				segundos=teclado.nextInt();
 			}
+			
 			minutos=minutos*60;
 			tiempo=minutos+segundos;
 			
-				if(tiempo<60) {
+				if(tiempo<3600) {
 					System.out.println("Tu tiempo es menor a 60 minutos.");
 					menos60++;
 				}else {
@@ -86,16 +87,20 @@ public class Carrerapopular1 {
 				respuesta=teclado.nextInt();
 			}
 		}
+			tiempominutos=tiempomedio/60;
+			tiemposegundos=tiempomedio%60;
+			
+			mejortiempominutos=mejortiempo/60;
+			mejortiemposegundos=mejortiempo%60;
+			
 		System.out.println("Numero de participantes: "+ participantes);
 		System.out.println("Participantes con más de 3 carreras : "+ totalcarreras);
 		System.out.println("Participantes con tiempos menores a 60 minutos: "+menos60);
-		System.out.printf("Tiempo medio : %.2f minutos.",(tiempomedio/60) );
+		System.out.printf("Tiempo medio : minutos: "+tiempominutos+" segundos: "+tiemposegundos );
 		System.out.println("");
-		System.out.printf("Mejor tiempo : %.2f minutos.",(mejortiempo/60);
+		System.out.printf("Mejor tiempo : minutos : "+mejortiempominutos+ " segundos: "+mejortiemposegundos);
 		
 		teclado.close();
 	}
 
 }
-
-	
