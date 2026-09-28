@@ -68,8 +68,7 @@ public class Videojuegos {
 			System.out.println(" -El numero total de enemigos derrotados por los jugadores es de " + enemigosTotal + ".");
 			System.out.println(" -El jugador" + recordUsuario + " tiene el record de puntuaje siendo de " + record + " puntos.");
 		}
-
-			
+		inputTeclado.close();
 		
 	}
 
