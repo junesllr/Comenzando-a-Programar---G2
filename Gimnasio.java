@@ -49,6 +49,8 @@ public class Gimnasio {
 		System.out.println("El usuario" + recordUsuario + " ha sido el usuario con mayor tiempo en el gimnasio en esta semana siendo de un total de " + record + ".");
 		System.out.println("El numero total de minutos realizados entre todos los usuarios es de " + minutosTotal + ".");
 		System.out.println("La cantidad de dias entrenados entre todos los usuarios esta semana es de " + diasTotal + ".");
+		
+		inputTeclado.close();
 
 	}
 
