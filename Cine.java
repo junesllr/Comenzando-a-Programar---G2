@@ -13,16 +13,33 @@ public class Cine {
 	
 		System.out.println("¿Cuántas personas se van a registrar?");
 		personas = sc.nextInt();
-
+	
+		while (personas<0) {
+			System.out.println("Error- Introduzca un número positivo");
+			System.out.println("¿Cuántas personas se van a registrar?");
+			personas = sc.nextInt();
+		}
+		
 		for (int i = 1; i <= personas; i++) {
 
 			System.out.println("\nCliente " + i);
 
 			System.out.println("¿Cuántas entradas de adultos?");
 			entradasAdult = sc.nextInt();
+		while (entradasAdult<0) {
+			System.out.println("Error- Introduzca un número positivo");
+			System.out.println("¿Cuántas entradas de adultos?");
+			entradasAdult = sc.nextInt();
+			}
 
 			System.out.println("¿Cuántas entradas infantiles?");
 			entradasInfant = sc.nextInt();
+		while (entradasInfant<0) {
+			System.out.println("Error- Introduzca un número positivo");
+			System.out.println("¿Cuántas entradas infantiles?");
+			entradasInfant = sc.nextInt();
+			}
+	
 
 			entradasTotal = entradasAdult + entradasInfant;
 
