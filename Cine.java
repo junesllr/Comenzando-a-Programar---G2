@@ -15,7 +15,7 @@ public class Cine {
 		personas = sc.nextInt();
 	
 		while (personas<0) {
-			System.out.println("Error- Introduzca un número positivo");
+			System.out.println("Error - Introduzca un número de personas positivo");
 			System.out.println("¿Cuántas personas se van a registrar?");
 			personas = sc.nextInt();
 		}
@@ -50,7 +50,7 @@ public class Cine {
 				precioTotal = precioTotal - descuento;
 			}
 
-			System.out.println("Número de entradas de adulto: " + entradasAdult);
+			System.out.println("Número de entradas de adulto:  " + entradasAdult);
 			System.out.println("Número de entradas infantiles: " + entradasInfant);
 			System.out.println("Número de entradas: " + entradasTotal);
 			System.out.println("Precio a pagar: " + precioTotal);
